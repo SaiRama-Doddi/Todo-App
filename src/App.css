@@ -110,3 +110,49 @@ button:hover {
   color: #555;
   margin-top: 20px;
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-app {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .todo-item span {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-app {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .todo-filter {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
