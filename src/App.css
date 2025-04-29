@@ -1,62 +1,71 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f8;
+/* Body Styles */
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(1deg, #6ec1e4, #5ca5d6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Todo App Container */
+.todo-app {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading */
 h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.todo-app {
-  background: white;
-  padding: 30px;
-  margin: 50px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  margin-bottom: 30px;
+  color: #2a92d8;
 }
 
 /* Form */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 input[type="text"] {
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 input[type="checkbox"] {
-  transform: scale(1.3);
-  margin-right: 10px;
+  transform: scale(1.4);
+  margin-right: 12px;
 }
 
+/* Buttons */
 button {
-  background-color: #007bff;
+  background-color: #2a92d8;
   color: white;
-  padding: 8px 12px;
+  padding: 10px 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #1b6fab;
 }
 
+/* Todo Item */
 .todo-item {
   display: flex;
   align-items: center;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
 
@@ -75,13 +84,19 @@ button:hover {
 }
 
 /* Filter Buttons */
+.todo-filter {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
 .todo-filter button {
-  margin: 0 5px;
-  background-color: #6c757d;
+  background-color: #6ec1e4;
 }
 
 .todo-filter button:hover {
-  background-color: #5a6268;
+  background-color: #49a1cd;
 }
 
 .todo-filter button:disabled {
@@ -89,9 +104,9 @@ button:hover {
   cursor: default;
 }
 
-/* No todos */
+/* No Todos */
 .no-todos {
   text-align: center;
-  color: #666;
+  color: #555;
   margin-top: 20px;
 }

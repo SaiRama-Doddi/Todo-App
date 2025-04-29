@@ -31,12 +31,18 @@ function App() {
   });
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
-      <h2>Todo List App</h2>
-      <TodoForm onAdd={addTodo} />
+    <div className="todo-app">
+    <h2>Todo List App</h2>
+    <TodoForm onAdd={addTodo} />
+    <div className="todo-filter">
       <TodoFilter filter={filter} setFilter={setFilter} />
-      <TodoList todos={filteredTodos} onToggle={toggleTodo} onDelete={deleteTodo} />
     </div>
+    {filteredTodos.length > 0 ? (
+      <TodoList todos={filteredTodos} onToggle={toggleTodo} onDelete={deleteTodo} />
+    ) : (
+      <p className="no-todos">No Todos to display.</p>
+    )}
+  </div>
   );
 }
 
