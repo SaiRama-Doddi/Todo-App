@@ -1,6 +1,6 @@
 function TodoFilter({ filter, setFilter }) {
     return (
-      <div style={{ marginBottom: '20px' }}>
+      <div style={{ marginBottom: '20px'}} className="filter-buttons">
         <button onClick={() => setFilter('all')} disabled={filter === 'all'}>
           All
         </button>
